@@ -2,15 +2,10 @@
 
 using namespace std;
 
-
-int main2() {
+int main1() {
 	
-
-	cout << "Program.cpp" << endl;
-
+	cout << "Source.cpp" << endl;
 
 
 	return 0;
 }
-
-
