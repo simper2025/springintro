@@ -3,11 +3,15 @@
 using namespace std;
 
 
-int main2() {
+int main() {
 	
 
-	cout << "Program.cpp" << endl;
+	int hens = 14;
+	double eggs = 2;
 
+	double percent = eggs / hens;
+
+	cout << percent << "%";
 
 
 	return 0;
