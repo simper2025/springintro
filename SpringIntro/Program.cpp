@@ -7,9 +7,9 @@ int main() {
 	
 
 	int hens = 14;
-	double eggs = 2;
+	int eggs = 2;
 
-	double percent = eggs / hens;
+	double percent = (eggs* 100.0) / hens;
 
 	cout << percent << "%";
 
