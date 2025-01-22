@@ -6,17 +6,19 @@ using namespace std;
 
 int main() {
 
-	double a = 17;
-	cout << a << endl;
+	char c;
 
-	a = 7000000000;
-	cout << a <<  endl;
-	
-	a = -2100000000;
-	cout << a <<  endl;
+	cin >> c;
 
-	a = a - 500000000;
-	cout << a << endl;
+	cout << "you typed '" << c << "'" << endl;
+
+
+	string name;
+
+	cin >> name;
+
+	cout << "you typed  " << name.length() << " characters" << endl;
+
 
 	return 0;
 }
