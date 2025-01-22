@@ -1,23 +1,18 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 
 int main() {
 
+	string first;
+	string last;
 
-	int hens;
-	int eggs;
+	cout << "Name: ";
+	getline(cin,  first);
 
-	cout << "How many hens do you have? ";
-	cin >> hens;
-	cout << "How many eggs did you get today? ";
-	cin >> eggs;
-
-	double percent = (eggs * 100.0) / hens;
-
-	cout  << percent << "% of you hens laid eggs.";
-
+	cout << "Hello " << first <<  endl;
 
 	return 0;
 }
