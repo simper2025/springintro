@@ -6,13 +6,17 @@ using namespace std;
 
 int main() {
 
-	string first;
-	string last;
+	double a = 17;
+	cout << a << endl;
 
-	cout << "Name: ";
-	getline(cin,  first);
+	a = 7000000000;
+	cout << a <<  endl;
+	
+	a = -2100000000;
+	cout << a <<  endl;
 
-	cout << "Hello " << first <<  endl;
+	a = a - 500000000;
+	cout << a << endl;
 
 	return 0;
 }
