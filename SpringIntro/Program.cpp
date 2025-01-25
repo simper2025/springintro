@@ -1,24 +1,37 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 
 int main() {
 
-	char c;
+	double grade;
+	cout << "What is your grade percentage? ";
+	cin >> grade;
 
-	cin >> c;
+	if (grade > 100) {
+		cout << "Congrats you earned an A+";
+	}
+	else if (grade > 0) {
+		cout << "You earned ";
 
-	cout << "you typed '" << c << "'" << endl;
+		if (grade >= 90.0)
+			cout << "an A ";
+		else if (grade >= 80)
+			cout << "a B ";
+		else if (grade >= 70)
+			cout << "a C ";
+		else if (grade >= 60)
+			cout << "a D ";
+		else
+			cout << "a failing grade";
+	}
+	else
+	{
+		cout << "mistakes were made";
+	}
 
-
-	string name;
-
-	cin >> name;
-
-	cout << "you typed  " << name.length() << " characters" << endl;
-
+	cout << endl;
 
 	return 0;
 }
