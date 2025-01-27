@@ -5,33 +5,29 @@ using namespace std;
 
 int main() {
 
-	double grade;
-	cout << "What is your grade percentage? ";
-	cin >> grade;
+	int cents;
+	cout << "How many cents change? ";
+	cin >> cents;
 
-	if (grade > 100) {
-		cout << "Congrats you earned an A+";
+	int quarters = cents / 25;
+	if (quarters > 0) {
+		cout << "Give them " << quarters << " quarters." << endl;
 	}
-	else if (grade > 0) {
-		cout << "You earned ";
+	cents = cents % 25;
 
-		if (grade >= 90.0)
-			cout << "an A ";
-		else if (grade >= 80)
-			cout << "a B ";
-		else if (grade >= 70)
-			cout << "a C ";
-		else if (grade >= 60)
-			cout << "a D ";
-		else
-			cout << "a failing grade";
+	int dimes = cents / 10;
+	if (dimes > 0) {
+		cout << "Give them " << dimes << " dimes." << endl;
 	}
-	else
-	{
-		cout << "mistakes were made";
-	}
+	cents = cents % 10;
 
-	cout << endl;
+	int nickels = cents / 5;
+	if (nickels > 0) {
+		cout << "Give them " << nickels << " nickels." << endl;
+	}
+	cents = cents % 5;
+
+	cout << "Give them " << cents << " pennies." << endl;
 
 	return 0;
 }
