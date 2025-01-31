@@ -7,9 +7,10 @@ int main() {
 
 	int num = 0;
 
-	while (num < 10) {
-		num++;
-		cout << num << endl;
+	while (true) {
+		if (num % 10000 == 0)
+			cout << num << endl;
+		num = num + 765431;
 	}
 
 	return 0;
