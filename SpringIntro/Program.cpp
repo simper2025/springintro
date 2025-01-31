@@ -5,14 +5,12 @@ using namespace std;
 
 int main() {
 
-	int hitpoint = 30;
-	int damage;
-	cout << "The monster has " << hitpoint << " hitpoints." 
-		<< endl;
-	cout << "How much damage do you do? ";
-	cin >> damage;
+	int num = 0;
 
-
+	while (num < 10) {
+		num++;
+		cout << num << endl;
+	}
 
 	return 0;
 }
