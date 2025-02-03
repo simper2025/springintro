@@ -5,32 +5,23 @@ using namespace std;
 
 
 int main() {
+	
+	/*char c = 61;
+	cout << "Char: " << c << endl;*/
 
-	string input = "a";
-
-	while (input != "q") {
-		cout << "Here is my menu \n";
-		cout << "1 - Count to ten\n";
-		cout << "q - quit\n";
-		cout << "What do you want to do? ";
-		cin >> input;
-
-		cout << endl;
-
-		if (input == "1") {
-			int num = 1;
-			while (num <= 10) {
-				cout << num << endl;
-				num++;
-			}
-		}
-		else if (input == "q") {
-
-		}
-		else {
-			cout << "That is not a menu option.\n";
-		}
+	int count = 0;
+	int i;
+	cout << "Start Position: ";
+	cin >> i;
+	while (i != 1) {
+		if (i % 2 == 1)
+			i = i * 3 + 1;
+		else
+			i = i / 2;
+		cout << "Value: " << i << endl;
+		count++;
 	}
+	cout << "Completed: " << count;
 
 	return 0;
 }
