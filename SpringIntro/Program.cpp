@@ -4,23 +4,18 @@ using namespace std;
 
 int main() {
 
-	int i = 0;
 
-	while (i <= 127) {
-		
+	for (int i = 0; i <= 256; i++) {
 		if (i != 27) {
-			cout << i << " "
+			cout //<< i << " "
 				<< (char)i << " ";
 		}
 		else
 		{
-			cout << i << " "
-				<< (char)(i) << " ";
-			//cout << "  ";
+			cout << "  ";
 		}
 		if (i % 16 == 0)
 			cout << endl;
-		i++;
 	}
 
 	return 0;
