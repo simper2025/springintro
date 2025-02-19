@@ -2,28 +2,31 @@
 
 using namespace std;
 
+
+
+void printList(int list[], int size) {
+	for (int i = 0; i < size; i++) {
+		cout << list[i] << ", ";
+	}
+	cout << endl;
+}
+
+void printValue(int num) {
+	cout << num << "\n";
+}
+
 int main() {
+	
+	int regular[5];
+	int initialized[] = { 1,2,3,4,5 };
+	int partInitialized[5] = { 1,2 };
 
-	int totals[] = { 1,2,3,4,5,12,3,45,6,7 };
-	int scores[10];
-
-	for (int i = 0; i < 10; i++)
-	{
-		cout << "What grade did the student get for assignment #"
-			<< i + 1 << ", out of " << totals[i] << " points? ";
-		cin >>  scores[i];
+	for (int i = 2; i < 5; i++) {
+		partInitialized[i] = 100;
 	}
-
-	double totalPoints = 0.0;
-	double studentTotal = 0.0;
-	for (int i = 0; i < 10; i++)
-	{
-		cout << "For assignment #" << i + 1 << " the student got " 
-			<< ((double)scores[i]/ totals[i]) * 100.0 << "%.\n";
-		totalPoints += totals[i];
-		studentTotal += scores[i];
-	}
-	cout << "The students overall score is " << studentTotal / totalPoints * 100.0 << "%.\n";
+	printValue(4);
+	printValue(partInitialized[3]);
+	printList(partInitialized, 6);
 	
 	return 0;
 }
