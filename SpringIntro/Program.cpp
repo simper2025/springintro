@@ -8,19 +8,8 @@ int main() {
 	
 	srand(time(0));
 
-	int min = rand();
-	int max = rand();
-
-	for (int i = 0; i < 10000; i++) {
-		int random = rand();
-		if (random > max)
-			max = random;
-		if (random < min)
-			min = random;
-	}
-
-	cout << min << endl;
-	cout << max << endl;
+	int num = rand() % 6 + 15;
+	cout << num << endl;
 
 	return 0;
 }
