@@ -4,30 +4,24 @@ using namespace std;
 
 
 
-void printList(int list[], int size) {
-	for (int i = 0; i < size; i++) {
-		cout << list[i] << ", ";
-	}
-	cout << endl;
-}
-
-void printValue(int num) {
-	cout << num << "\n";
-}
-
 int main() {
 	
-	int regular[5];
-	int initialized[] = { 1,2,3,4,5 };
-	int partInitialized[5] = { 1,2 };
+	srand(time(0));
 
-	for (int i = 2; i < 5; i++) {
-		partInitialized[i] = 100;
+	int min = rand();
+	int max = rand();
+
+	for (int i = 0; i < 10000; i++) {
+		int random = rand();
+		if (random > max)
+			max = random;
+		if (random < min)
+			min = random;
 	}
-	printValue(4);
-	printValue(partInitialized[3]);
-	printList(partInitialized, 6);
-	
+
+	cout << min << endl;
+	cout << max << endl;
+
 	return 0;
 }
 
