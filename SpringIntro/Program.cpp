@@ -1,49 +1,55 @@
 #include <iostream>
 using namespace std;
 
-void printArray(int prefix, int a[], int size);
+
+string ConvertToHex(int value) {
+	string retval = "";
+	int num;
+	char val;
+
+
+	while (value > 0) {
+		num = value % 16;
+		val = (char)(48 + num);
+		if (val > 58)
+			val += 39;
+		retval.push_back(val);
+		value = value / 16;
+	}
+
+	val = retval[0];
+	retval[0] = retval[1];
+	retval[1] = val;
+
+	return retval;
+}
 
 int main() {
 
-	const int SIZE = 13;
-	int arr[SIZE] = { 21,4,6,14,8,43,9,2,1,3,56,7,22 };
-	//int arr[SIZE] = { 13,12,11,10,9,8,7,6,5,4,3,2,1 };
+	string input;
 
-	printArray(-1, arr, SIZE);
+	cin >> input;
 
-	for (int j = 0; j < SIZE - 1; j++) {
-		bool sorted = true;
+	char c;
+	int value;
 
-		for (int i = 0; i < SIZE - 1 - j; i++) {
-			if (arr[i] > arr[i + 1]) {
-				int temp = arr[i];
-				arr[i] = arr[i + 1];
-				arr[i + 1] = temp;
-				sorted = false;
-			}
-			break;
-		}
-		printArray(j, arr, SIZE);
-		if (sorted) {
-			break;
-		}
+	for (int i = 0; i < input.size(); i++)
+	{
+		c = input[i];
+		value = c;
+
+		
+		cout <<  //c << ": " << value << ", " << 
+			ConvertToHex(value) << " ";
+		
 	}
 
 
 	return 0;
-
-
 }
 
 
 
-void printArray(int prefix, int a[], int size) {
-	cout << "#" << prefix << ": ";
-	for (int i = 0; i < size; i++) {
-		cout << a[i] << ", ";
-	}
-	cout << endl;
-}
 
 
 
