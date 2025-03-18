@@ -1,49 +1,36 @@
 #include <iostream>
+#include <string>
+#include <fstream>
+
 using namespace std;
 
 
-string ConvertToHex(int value) {
-	string retval = "";
-	int num;
-	char val;
 
-
-	while (value > 0) {
-		num = value % 16;
-		val = (char)(48 + num);
-		if (val > 58)
-			val += 39;
-		retval.push_back(val);
-		value = value / 16;
-	}
-
-	val = retval[0];
-	retval[0] = retval[1];
-	retval[1] = val;
-
-	return retval;
-}
 
 int main() {
 
-	string input;
+	ifstream input;
 
-	cin >> input;
+	input.open("name.txt");
 
-	char c;
-	int value;
+	string item;
 
-	for (int i = 0; i < input.size(); i++)
+	//while (input >> item) 
+	while (getline(input, item)) 
 	{
-		c = input[i];
-		value = c;
-
-		
-		cout <<  //c << ": " << value << ", " << 
-			ConvertToHex(value) << " ";
-		
+		cout << item << endl;
 	}
 
+	input.close();
+
+	ofstream output;
+
+	output.open("output.txt");
+
+	cin >> item;
+	output << item;
+
+	output.close();
 
 	return 0;
 }
