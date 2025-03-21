@@ -5,32 +5,24 @@
 using namespace std;
 
 
-
+int factorial(int i) {
+	if (i == 1) {
+		return i;
+	}
+	return i * factorial(i - 1);
+}
 
 int main() {
 
-	ifstream input;
 
-	input.open("name.txt");
+	cout << factorial(6) << endl;
 
-	string item;
+	int list[] = { 1,2,3,4,5,6,7 };
 
-	//while (input >> item) 
-	while (getline(input, item)) 
-	{
-		cout << item << endl;
+	for (int i : list) {
+		i *= 3;
+		cout << i << ", ";
 	}
-
-	input.close();
-
-	ofstream output;
-
-	output.open("output.txt");
-
-	cin >> item;
-	output << item;
-
-	output.close();
 
 	return 0;
 }
