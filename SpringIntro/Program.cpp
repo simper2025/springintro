@@ -5,24 +5,32 @@
 using namespace std;
 
 
-int factorial(int i) {
-	if (i == 1) {
-		return i;
-	}
-	return i * factorial(i - 1);
-}
+struct Point {
+	int X;
+	int Y;
+};
+
 
 int main() {
 
+	
+	//int directionX = 1;
+	//int directionY = 0;
 
-	cout << factorial(6) << endl;
+	Point direction;
+	direction.X = 1;
+	direction.Y = 0;
 
-	int list[] = { 1,2,3,4,5,6,7 };
 
-	for (int i : list) {
-		i *= 3;
-		cout << i << ", ";
-	}
+	Point snek;
+	snek.X = 12;
+	snek.Y = 7;
+
+	Point mouse = { 4, 17 };
+
+	cout << "x = " << mouse.X << endl;
+	cout << "y = " << mouse.Y << endl;
+
 
 	return 0;
 }
