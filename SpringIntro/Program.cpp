@@ -1,38 +1,40 @@
 #include <iostream>
-#include <string>
-#include <fstream>
+#include <vector>
 
 using namespace std;
 
+void DoesStuff(vector<int> arr) {
 
-struct Point {
-	int X;
-	int Y;
-};
-
+}
 
 int main() {
 
+	vector<int> list = {34, 37, 12, 78};
+
+	list.erase(list.begin() + 1);
+	//vector<vector<int>> multilist;
+
+	//list.push_back(37);
 	
-	//int directionX = 1;
-	//int directionY = 0;
+	list[0] = 2;
 
-	Point direction;
-	direction.X = 1;
-	direction.Y = 0;
+	int input = 1;
 
+	while (input != 0) {
+		cin >> input;
+		list.push_back(input);
+	}
 
-	Point snek;
-	snek.X = 12;
-	snek.Y = 7;
+	for (int i = 0; i < list.size(); i++) {
+		cout << list[i] << ", ";
+	}
 
-	Point mouse = { 4, 17 };
+	while (list.size() > 0)
+	{
+		input = list[list.size() - 1];
+		list.pop_back();
+	}
 
-	cout << "x = " << mouse.X << endl;
-	cout << "y = " << mouse.Y << endl;
-
-
-	return 0;
 }
 
 
