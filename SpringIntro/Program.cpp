@@ -1,44 +1,26 @@
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
-void DoesStuff(vector<int> arr) {
+void Power(int num, int exp, int &answer) {
+	answer = 1;
 
+	for (int i = 0; i < exp; i++)
+	{
+		answer *= num;
+	}
 }
 
 int main() {
+	int a = 3;
 
-	vector<int> list = {34, 37, 12, 78};
+	int value;
+	Power(a, 4, value);
 
-	list.erase(list.begin() + 1);
-	//vector<vector<int>> multilist;
+	cout << value << endl;
 
-	//list.push_back(37);
-	
-	list[0] = 2;
-
-	int input = 1;
-
-	while (input != 0) {
-		cin >> input;
-		list.push_back(input);
-	}
-
-	for (int i = 0; i < list.size(); i++) {
-		cout << list[i] << ", ";
-	}
-
-	while (list.size() > 0)
-	{
-		input = list[list.size() - 1];
-		list.pop_back();
-	}
-
+	cout << "a: " << a << endl;
 }
-
-
-
-
-
 
