@@ -4,32 +4,36 @@
 
 using namespace std;
 
-void Power(int num, int exp, int *answer) {
-	*answer = 1;
-	int value = 27;
-	for (int i = 0; i < exp; i++)
-	{
-		*answer *= num;
-	}
+int* foo() {
+	int* ptr1 = new int;
+	*ptr1 = 72;
+
+	int c = 13;
+	int* ptr2 = &c;
+
+	int* p = new int[c];
+	
+	delete p;
+
+	return ptr1;
 }
 
+
 int main() {
-	int a = 3;
+	
+	int* p = new int [12];
 
-	int* ptr = nullptr;
-	int value = 0;
-	ptr = &value;
+	*(p + 0) = 21;
 
+	*(p + 1) = 17;
 
-
-	cout << "value: " << value << ", &value: " << &value << endl;
-	cout << "ptr: " << ptr << ", &ptr: " << &ptr << " *ptr : " << *ptr << endl;
+	p[2] = 75;
 
 
-	Power(a, 4, ptr);
+	int* i = p;
 
-	cout << value << endl;
+	i++;
 
-	cout << "a: " << a << endl;
+	delete p;
 }
 
